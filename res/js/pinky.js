@@ -25,17 +25,23 @@ Pyk.newsDiscovery = function(){
             url: url,
             // Work with the response
             success: function (response) {
-                console.log('response', response.feed.entry); // server response
+
                 var data = {
                     name: "contentItems",
                     children:[]
-                }
+                };
+
                 $.each(response.feed.entry, function( index, row ) {
+
+                    var twitterImage = row.gsx$imagendeperfillinkaunaimagen.$t;
+                    if (!that._checkURL(row.gsx$imagendeperfillinkaunaimagen.$t)) {
+                        twitterImage = 'res/img/dummy_avatar.png';
+                    }
                     data.children.push({
                         id: index,
-                      title: row.gsx$apellido.$t + row.gsx$nombre.$t,
-                      name: row.gsx$nombre.$t,
-                      firstname: row.gsx$apellido.$t,
+                        title: row.gsx$apellido.$t + ' ' + row.gsx$nombre.$t,
+                        name: row.gsx$nombre.$t,
+                        firstname: row.gsx$apellido.$t,
                         email: "YES",
                         email_url: row.gsx$direccióndecorreo.$t,
                         skills: [ row.gsx$aquétededicas.$t ],
@@ -47,37 +53,21 @@ Pyk.newsDiscovery = function(){
                         website_url: row.gsx$website.$t,
                         pgp:"N/A",
                         pgp_url:"",
-                        image_url: row.gsx$imagendeperfillinkaunaimagen.$t,
+                        image_url: twitterImage,
                         twitter_url: row.gsx$twitter.$t,
                         twitter: "YES"
-               //       "country": "The Netherlands",
-                      //"city": "Amsterdam",
-              //        "institution": "LocalFocus",
-              //        "github": "N/A",
-              //        "github_url": "",
-              //        "website": "YES",
-              //        "website_url": "http://www.localfocus.nl",
-              //        "email": "YES",
-              //        "email_url": "yordi@localfocus.nl",
-              //        "pgp": "N/A",
-              //        "pgp_url": "",
-              //        "skills": [
-             //           "Data Journalist",
-             //           "Designer"
-             //       ],
-             //         "image_url": "res/img/yordi_dam.png",
-             //         "twitter_url": "http://www.twitter.com/yordidam",
-             //         "twitter": "YES"
                     });
 
                 });
-                console.log(data);
 
                 that.data = data;
                 that.initCrossfilter();
                 that.initMap();
                 that.renderTags();
                 that.initSearch();
+                $(".thumbnail").error(function(){
+                    $(this).attr('src', 'res/img/dummy_avatar.png');
+                });
 
             }
         });
@@ -639,6 +629,10 @@ Pyk.newsDiscovery = function(){
         var a = [];
         for(var i in d) a.push({"key": i, "value": d[i]});
         return a;
+    };
+
+    this._checkURL = function(url){
+        return(url.match(/^(http|https|ftp)/) != null);
     };
     
   
