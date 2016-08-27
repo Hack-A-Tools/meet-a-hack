@@ -1,8 +1,15 @@
 Directory
 =========
 
-February 2014
+DIRECTORIO DE CONCURRENTES
 
+Agosto 2016
+www.Mediaparty.info 2016
+
+http://hack-a-tools.github.io/meet-a-hack
+
+
+This is a fork from: 
 http://jplusplus.github.io/global-directory
 
 ## The project
