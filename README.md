@@ -4,10 +4,12 @@ Directory
 DIRECTORIO DE CONCURRENTES
 
 Agosto 2016
-www.Mediaparty.info 2016
+Hacks Hackers Buenos Aires Mediaparty Hackaton
 
+Live demo:
 http://hack-a-tools.github.io/meet-a-hack
 
+~~~~~~~
 
 This is a fork from: 
 http://jplusplus.github.io/global-directory
