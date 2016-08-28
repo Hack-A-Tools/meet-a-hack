@@ -2,53 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Global Data Journalists Directory</title>
-    <meta property="og:title" content="Global Data Journalists Directory"/>
-    <meta property="og:site_name" content="Global Data Journalists Directory"/>
+    <title>Meet a Hack</title>
+    <meta property="og:title" content="Meet a Hack"/>
+    <meta property="og:site_name" content="Meet a Hack"/>
     <meta property="og:type" content="website"/>
     
-    
     <link rel="shortcut icon" href="/pykcharts/images/favicon.ico" type="image/ico">
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,600' rel='stylesheet' type='text/css'>
     <link href="res/lib/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="res/css/master.css" rel="stylesheet" type="text/css">
     <link href="res/css/flip.css" rel="stylesheet" type="text/css">
-	<link href="res/lib/leaflet-0.7.3/MarkerCluster.Default.css" rel="stylesheet" type="text/css">
-	<link href="res/lib/leaflet-0.7.3/leaflet.css" rel="stylesheet" type="text/css">
-	<link href="res/css/mapview.css" rel="stylesheet" type="text/css">
+	  <link href="res/lib/leaflet-0.7.3/MarkerCluster.Default.css" rel="stylesheet" type="text/css">
+	  <link href="res/lib/leaflet-0.7.3/leaflet.css" rel="stylesheet" type="text/css">
+	  <link href="res/css/mapview.css" rel="stylesheet" type="text/css">
     <link href="res/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://apis.google.com/js/client.js?onload=checkAuth">
-    </script>
+    <script src="//apis.google.com/js/client.js?onload=checkAuth"></script>
   </head>
 
   <body>
   
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="header_new">
+    <div class="header_new">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
           <!-- Button trigger modal -->
 			
-      <form class="form-inline navbar-search" role="form">
-            <div class="form-group">
-            <input id="search" autocomplete="off" type="text" class="search-query span2 form-control" placeholder="Search directory">
-            </div> 
-            <button id="clear_search_btn" type="button" class="btn btn-default btn-sm"><i class="icon-remove-circle"></i> Clear</button>
-			<button id="mapToggle" type="button" class="btn btn-default btn-sm">Map View</button>
-			<a href="http://bit.do/quiensos" target="_blank"><button type="button" class="btn btn-default btn-sm">Join the directory</button></a>
-      <a href="#"><button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">About</button></a>
-      
-			
-                  
-			</form>
-      </nav>
-
-
-        
-   		
-        
-		<!-- Modal -->
+            <form class="form-inline navbar-search" role="form">
+              <div class="form-group">
+                <input id="search" autocomplete="off" type="text" class="search-query span2 form-control" placeholder="Search directory">
+              </div>
+              <button id="clear_search_btn" type="button" class="btn btn-default btn-sm"><i class="icon-remove-circle"></i> Clear</button>
+			        <button id="mapToggle" type="button" class="btn btn-default btn-sm">Map View</button>
+			        <a href="http://bit.do/quiensos" target="_blank"><button type="button" class="btn btn-default btn-sm">Join the directory</button></a>
+              <a href="#"><button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">About</button></a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <!-- Modal -->
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   		<div class="modal-dialog">
    		<div class="modal-content">
@@ -64,7 +58,7 @@
 		<br><b>Please help us map the global data journalists network and fill out our <a href="http://bit.ly/ddjdirectory" target="_blank">
       	questionnaire.</a></b><br/><br/>
 
-      	<a href="https://twitter.com/intent/tweet?button_hashtag=ddj&text=%40jplusplus_%20Wants%20to%20Build%20a%20Global%20Directory%20of%20Data-Driven%20Journalists%20https%3A%2F%2Fjplusplus.github.io%2Fglobal-directory%20%7C%20Join%20us%20http%3A%2F%2Fbit.ly%2Fddj-directory" class="twitter-hashtag-button">Tweet #ddj</a>
+      	<a href="//twitter.com/intent/tweet?button_hashtag=ddj&text=%40jplusplus_%20Wants%20to%20Build%20a%20Global%20Directory%20of%20Data-Driven%20Journalists%20https%3A%2F%2Fjplusplus.github.io%2Fglobal-directory%20%7C%20Join%20us%20http%3A%2F%2Fbit.ly%2Fddj-directory" class="twitter-hashtag-button">Tweet #ddj</a>
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
      	<div class="modal-footer">
@@ -174,10 +168,7 @@
     <script src="res/lib/bootstrap.js" type="text/javascript"></script>
     <script src="res/lib/crossfilter.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="res/js/pinky.js" type="text/javascript" charset="utf-8"></script>
-	<script src="res/js/mapview.js" type="text/javascript" charset="utf-8"></script>
-
-    
-
+	  <script src="res/js/mapview.js" type="text/javascript" charset="utf-8"></script>
 
   </body>
 </html>
