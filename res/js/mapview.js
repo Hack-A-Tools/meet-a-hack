@@ -7,8 +7,8 @@ var map;
 var layerGroup;
 var markers;
 var fetchedAddresses = new Object();
-var mapQuestApiKey = "Fmjtd|luur206a20%2Cbn%3Do5-9at004"; // Open Steps APIKey, change please
-var geocodeApiURL="http://www.mapquestapi.com/geocoding/v1/address?key="+mapQuestApiKey+"&country=#country#&city=#city#";
+var mapQuestApiKey = "hCkp7A0ExkxEhPNmIYo4RxXeR5st9Jv1"; // Open Steps APIKey, change please
+var geocodeApiURL="//www.mapquestapi.com/geocoding/v1/address?key="+mapQuestApiKey+"&country=#country#&city=#city#";
 
 var initializeMap = function() {
   

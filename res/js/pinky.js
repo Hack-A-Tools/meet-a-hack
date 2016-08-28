@@ -45,8 +45,9 @@ Pyk.newsDiscovery = function(){
                         email: "YES",
                         email_url: row.gsx$direccióndecorreo.$t,
                         skills: [ row.gsx$aquétededicas.$t ],
-                        city: "",
-                        institution: row.gsx$compañíaorganización.$t,
+                        city: (!!row.gsx$ciudad.$t ? row.gsx$ciudad.$t : '-'),
+                        country: (!!row.gsx$país.$t ? row.gsx$país.$t : '-'),
+                        institution: (!!row.gsx$compañíaorganización.$t ? row.gsx$compañíaorganización.$t : '-'),
                         github:"N/A",
                         github_url:"",
                         website: "YES",
@@ -57,7 +58,6 @@ Pyk.newsDiscovery = function(){
                         twitter_url: row.gsx$twitter.$t,
                         twitter: "YES"
                     });
-
                 });
 
                 that.data = data;
@@ -71,16 +71,6 @@ Pyk.newsDiscovery = function(){
 
             }
         });
-
-        // Load Data, Create Crossfilter & Render
-        //$.getJSON("res/data/data.json", function(json){
-        //    that.data = json;
-        //    that.initCrossfilter();
-        //    that.initMap();
-        //    that.renderTags();
-        //    that.initSearch();
-        //});
-
     };
 
 
