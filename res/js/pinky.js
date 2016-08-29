@@ -54,7 +54,7 @@ Pyk.newsDiscovery = function(){
                         website_url: row.gsx$website.$t,
                         pgp:"N/A",
                         pgp_url:"",
-                        image_url: twitterImage,
+                        image_url: twitterImage.replace(/.*?:\/\//g, "//"),
                         twitter_url: row.gsx$twitter.$t,
                         twitter: "YES"
                     });
